@@ -1,0 +1,62 @@
+<form (ngSubmit)="getAllStudents()">         
+    <button type="submit" class="btn btn-primary">Back</button>        
+  </form>
+<div class="col-md-6 offset-md-3">
+
+    <h1> Add Student </h1>
+
+    <form (ngSubmit) = "onSubmit()" #Registerform="ngForm"> 
+        <small class="text-danger">{{msg}}</small>
+        <small class="text-danger" [class.d-none]="firstname.valid || firstname.untouched">first name is required </small>
+        <div class="form-group">
+            <label> First Name </label>
+            <input required type="text" class="form-control" id="firstName" 
+            [(ngModel)] = "student.firstName" name="firstName" #firstname= "ngModel">
+        </div>
+<!-- <div>touched: {{firstname.touched}}</div> -->
+<small class="text-danger" [class.d-none]="lastname.valid || lastname.untouched">last name is required </small>
+        <div class="form-group">
+            <label> Last Name </label>
+            <input required type="text" class="form-control" id="lastName" 
+            [(ngModel)] = "student.lastName" name="lastName" #lastname= "ngModel">
+        </div>
+        <small class="text-danger" [class.d-none]="age.valid || age.untouched">Current Age is required </small>
+        <div class="form-group">
+            <label> Age </label>
+            <input required type="text" class="form-control" id="Age" 
+            [(ngModel)] = "student.age" name="age" #age= "ngModel">
+        </div>
+        <small class="text-danger" [class.d-none]="father.valid || father.untouched">Father's name name is required </small>
+        <div class="form-group">
+            <label> Father</label>
+            <input required type="text" class="form-control" id="Father" 
+            [(ngModel)] = "student.father" name="father" #father= "ngModel">
+        </div>
+        <small class="text-danger" [class.d-none]="mother.valid || mother.untouched">Mother's name is required </small>
+        <div class="form-group">
+            <label> Mother </label>
+            <input required type="text" class="form-control" id="Mother" 
+            [(ngModel)] = "student.mother" name="mother" #mother= "ngModel">
+        </div>
+<small class="text-danger" [class.d-none]="admissionNo.valid || admissionNo.untouched">Admission Number is required </small>
+        <div class="form-group">
+            <label> AdmissionNo</label>
+            <input required type="text" class="form-control" id="AdmissionNo" 
+            [(ngModel)] = "student.admissionNo" name="admissionNo" #admissionNo= "ngModel">
+        </div>
+        <small class="text-danger" [class.d-none]="address.valid ||address.untouched">Address is required </small>
+        <div class="form-group">
+            <label> Address </label>
+            <input required type="text" class="form-control" id="Address" 
+            [(ngModel)] = "student.address" name="address" #address= "ngModel">
+        </div>
+        <small class="text-danger" [class.d-none]="contactNo.valid || contactNo.untouched">Contact Number is required </small>
+        <div class="form-group">
+            <label> contact Number</label>
+            <input required type="text" class="form-control" id="contactNo" 
+            [(ngModel)] = "student.contactNo" name="contactNo" #contactNo= "ngModel">
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled]="Registerform.form.invalid"> Submit </button>
+
+    </form>
+</div>

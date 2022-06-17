@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+      </svg>
+</head>
+<body>
+    
+
+<form (ngSubmit)="getAllStudents()">         
+    <button type="submit" class="back" style="color: white;"> Back</button>        
+  </form>
+    
+
+    
+    <div class="image">
+        <img class="image1" src="../../assets/ettimg-removebg-preview.png" alt="">
+    
+    </div>
+   
+    <div class="container">
+        <form (ngSubmit) = "onSubmit()" #Registerform="ngForm">
+            <small class="text-danger" [class.d-none]="admissionNo.valid || admissionNo.untouched">admission number is required </small>
+            <div class="form-group">
+                
+                    <label for="student">Admission Number</label>
+                    <input required type="text" class="admissionNo" placeholder="Enter the admission Number" required
+                    [(ngModel)] = "attendance.admissionNo" #admissionNo= "ngModel" name="admissionNo">
+    
+                <!-- </label> -->
+            </div>
+            <!-- <div>touched: {{admissionNo.touched}}</div> -->
+            <small class="text-danger" [class.d-none]="attendanceDate.valid || attendanceDate.untouched">Date is required </small>
+            <div class="form-group">
+                <label for="date" style="font-weight: bold;" >Date</label>
+                <input required class="date" name="date" type="date" placeholder="Enter the date"
+                [(ngModel)] = "attendance.attendanceDate" #attendanceDate="ngModel">
+            </div>
+            <small class="text-danger" [class.d-none]="attendances.valid || attendances.untouched">attendance is required </small>
+            <div class="form-group">
+                <label for="month" >Attendance </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select required name="month" id="" [(ngModel)] = "attendance.attendance" name="attendance" #attendances="ngModel">select
+                <option name="month" id="">Present</option>
+                <option name="month" id="">Absent</option>                
+            </select>
+            </div>
+            
+            <div>
+                  
+                <button class="messagebutton" type="submit" [disabled]="Registerform.form.invalid" >Add attendance</button>
+            </div>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="right">
+        <label for="description" style="font-weight: bold;">Description</label>
+        <div class="">
+            
+            <textarea name="description" id="comment" cols="30" rows="10" placeholder=" Description"required></textarea>
+        </div>
+        <div>
+            <button class="messagebutton" type="submit" >Add attendance</button>
+        </div>
+    </div> -->

@@ -1,0 +1,54 @@
+<!-- <p>registration works!</p> -->
+<body>
+  <div class="image">
+    <img class=image12 src="assets/registration.jpeg" alt="">
+    
+  </div>
+  <!-- <div class="image2">
+    <img class=image13 src="assets/online-registration.jpg" alt="">
+  </div> -->
+<div class="wrapper" >
+    <div class="logo">
+    <img src="assets/admin.png" alt="">
+    </div>
+    <div class="text-center mt-4 name">
+    ADMIN PANEL
+    </div>
+    <form class="p-3 mt-3" #Registerform="ngForm" (ngSubmit)="registerUser()">
+      <small class="text-danger">{{msg}}</small>
+  
+      <small class="text-danger" [class.d-none]="username.valid || username.untouched">User Name is required </small>
+    <div class="form-field d-flex align-items-center">
+    <span class="far fa-user"></span>
+    <input type="text" name="username" placeholder="Enter your name"  name="username" [(ngModel)]="user.userName" required  #username="ngModel"
+    [class.is-invalid]="username.invalid && username.touched">
+    </div>
+  
+    <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required </small>
+    <div class="form-field d-flex align-items-center">
+      <span class="far fa-user"></span>
+      <input type="email" name="email" placeholder="Enter valid email"  name="email" [(ngModel)]="user.emailId" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" #email="ngModel"
+      [class.is-invalid]="email.invalid && email.touched">
+    </div>
+  
+    <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required </small>
+    <div class="form-field d-flex align-items-center">
+      <span class="far fa-user"></span>
+      <input type="password" name="password" placeholder="Enter Password"  name="password" [(ngModel)]="user.password" required  #password="ngModel"
+      [class.is-invalid]="password.invalid && password.touched">
+    </div>
+  
+    <small class="text-danger" [class.d-none]="cpassword.value == password.value || cpassword.untouched">Password & Confirm Password must be same</small>
+    <div class="form-field d-flex align-items-center">
+      <span class="far fa-user"></span>
+      <input type="password" name="password" placeholder="Confirm Password"  name="cpassword" [(ngModel)]="user.cpassword" required  #cpassword="ngModel"
+      [class.is-invalid]="cpassword.invalid && cpassword.touched">
+    </div>
+  
+    <button [disabled]="Registerform.form.invalid" type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <div class="text-center fs-6">
+    <a href="/login">Existing user ? Login here</a>
+    </div>
+    </div>
+  </body>

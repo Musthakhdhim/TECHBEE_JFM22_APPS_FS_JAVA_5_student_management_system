@@ -1,0 +1,117 @@
+<!-- <p>addmark works!</p> -->
+<body>
+    <!-- <p>fee works!</p> -->
+    <form (ngSubmit)="getAllStudents()">         
+        <button type="submit" class="back" style="color: white;">Back</button>        
+      </form>
+    <div class="image">
+        <img class="image1" src="../../assets/Students_watching_webinar_on_computer-removebg-preview.png" alt="">
+    
+    </div>
+    <div class="container">
+        <form (ngSubmit) = "onSubmit()" #Registerform="ngForm"> 
+        
+            
+            <small class="text-danger" [class.d-none]="admissionNo.valid || admissionNo.untouched">admission number is required </small>
+            <div class="form-group">
+                <label> Admission Number </label>
+                <input required type="text" class="form-control" id="admissionNo" placeholder="Enter admission Number"
+                [(ngModel)] = "mark.admissionNo" name="admissionNo" #admissionNo= "ngModel">
+            </div>
+            <small class="text-danger" [class.d-none]="physics.valid || physics.untouched">Physics mark is required </small>
+            <div class="form-group">
+                <label> Physics Mark </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input required type="text" class="form-control" id="physics" placeholder="Enter physics mark"
+                [(ngModel)] = "mark.physics" name="physics" #physics= "ngModel">
+            </div>
+            <small class="text-danger" [class.d-none]="maths.valid || maths.untouched">Maths mark is required </small>
+            <div class="form-group">
+                <label> Maths mark </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input required type="text" class="form-control" id="maths" placeholder="Enter maths mark"
+                [(ngModel)] = "mark.maths" name="maths" #maths= "ngModel">
+            </div>
+            <small class="text-danger" [class.d-none]="chemistry.valid || chemistry.untouched">Chemisrty mark is required </small>
+    
+            <div class="form-group">
+                <label> Chemistry Mark </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input required type="text" class="form-control" id="chemistry" placeholder="Enter chemistry mark"
+                [(ngModel)] = "mark.chemistry" name="chemistry" #chemistry= "ngModel">
+            </div>
+    
+            
+            <button class="marksavebutton" type="submit" [disabled]="Registerform.form.invalid"> Submit </button>
+    
+        </form>
+    </div>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- <form >
+            <div class="formGroup">
+                <label for="">Select Student</label>&nbsp;&nbsp;
+                <select name="" id="">
+                    <option value="">select</option>
+                </select>
+            </div>
+            <div class="formGroup">
+                <label for="month">Roll no</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" placeholder="Enter roll number">
+            </div>
+            <div class="formGroup">
+                <label for="">Physics</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" placeholder="Enter Physics marks">
+            </div>
+            <div class="formGroup">
+                <label for="">Chemisty</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" placeholder="Enter Chemistry marks">
+            </div>
+            <div class="formGroup">
+                <label for="">Maths</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" placeholder="Enter Maths marks">
+            </div>
+            <div>
+                <button class="marksavebutton" type="submit" >Save</button>
+            </div> -->
+            <!-- <table>
+                <tr class="formGroup">
+                    <th><label for="">Select Student</label></th>
+                    <th><select name="" id="">
+                        <option value="">select</option>
+                    </select></th>
+                </tr>
+                <tr class="formGroup">
+                    <td><label for="month">Roll no</label></td>
+                    <td><input type="text" placeholder="Enter roll number"></td>
+                </tr>
+                <tr class="formGroup">
+                  <td><label for="">Physics</label></td>
+                  <td><input type="text" placeholder="Enter Physics marks"></td>  
+                </tr>
+                <tr class="formGroup">
+                    <td><label for="">Chemisty</label></td>
+                    <td><input type="text" placeholder="Enter Chemistry marks"></td>
+                </tr>
+                <tr class="formGroup">
+                    <td><label for="">Maths</label></td>
+                    <input type="text" placeholder="Enter Maths marks">
+                    <td></td>
+                </tr>
+            </table> -->
+        <!-- </form> -->

@@ -1,0 +1,53 @@
+<body>
+    <form (ngSubmit)="getAllStudents()">         
+        <button type="submit" class="back" style="color: white;">Back</button>        
+      </form>
+    <!-- <p>fee works!</p> -->
+    <div class="image">
+        <img class="image1" src="../../assets/2970533-1-scaled.jpg" alt="">
+    
+    </div>
+    <div class="container">
+        <form (ngSubmit) = "onSubmit()" #Registerform="ngForm">
+            <small class="text-danger" [class.d-none]="admissionNo.valid || admissionNo.untouched">Admission number is required </small>
+            <div class="formGroup">
+                <label for="">Admission number</label>
+                <input required type="text" class="form-control" id="admissionNo" 
+                [(ngModel)] = "fee.admissionNo" name="admissionNo" #admissionNo= "ngModel">
+            </div>
+            <!-- <div>touched: {{admissionNo.touched}}</div> -->
+            <small class="text-danger" [class.d-none]="paidmonth.valid || paidmonth.untouched">Month of payment is required </small>
+            <div class="formGroup">
+                <label for="month">Month</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select required name="month" id="" [(ngModel)] = "fee.paidmonth" name="paidmonth" #paidmonth= "ngModel">select
+                <option name="month" id="">January</option>
+                <option name="month" id="">February</option>
+                <option name="month" id="">March</option>
+                <option name="month" id="">April</option>
+                <option name="month" id="">May</option>
+                <option name="month" id="">June</option>
+                <option name="month" id="">July</option>
+                <option name="month" id="">August</option>
+                <option name="month" id="">September</option>
+                <option name="month" id="">October</option>
+                <option name="month" id="">November</option>
+                <option name="month" id="">December</option>
+            </select>
+            </div>
+            <small class="text-danger" [class.d-none]="amount.valid || amount.untouched">Amount of fee recieved is required </small>
+            <div class="formGroup">
+                <label for="">Amount</label>&nbsp;&nbsp;&nbsp;
+                <input required type="text" placeholder="Enter the amount"
+                [(ngModel)] = "fee.amount" name="amount" #amount= "ngModel">
+            </div>
+            <small class="text-danger" [class.d-none]="feedate.valid || feedate.untouched">Date of payment is required </small>
+            <div class="formGroup">
+                <label for="">Date</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input required type="date"   [(ngModel)] = "fee.feeDate" name="date" #feedate= "ngModel">
+            </div>
+            <div>
+                <button class="feesavebutton" type="submit" [disabled]="Registerform.form.invalid">Save</button>
+            </div>
+        </form>
+    </div>
+    </body>

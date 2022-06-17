@@ -1,0 +1,41 @@
+<form (ngSubmit)="loginUser()">         
+    <button type="submit" class="btn btn-primary">Back to Home</button>        
+  </form>
+  
+<h2> Attendance List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            
+            <th>Admission Number</th>
+            <th> Attendance Date</th>
+            <th> Attendance </th>
+            
+            
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let attendances of attendance">
+            <td> {{attendances.admissionNo}} </td>
+            <td> {{attendances.attendanceDate}} </td>
+            <td> {{attendances.attendance}} </td>
+            
+            
+
+            <td>
+                <!-- <button 
+                (click) = "updateAttendance(attendances.id)"
+                class="btn btn-info"> Update
+                </button>
+                &nbsp; -->
+                
+                <button 
+                (click) = "deleteAttendance(attendances.id)"
+                class="btn btn-danger"> Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a class="logo-text" style="text-align: center;" href="#"><img class="image"  src="../assets/admin.png" style="width: 40px;">Admin Portal</a><br>
+                
+            </div>
+            <div class="menu-bar">   
+                
+                <ul>
+                    <li class="active"><a [routerLink]="['/loginsuccess']"> Home</a> </li>
+                    <li><a href="#">Administration</a>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a [routerLink]="['/addstudent']" style="font-size: 13px;">ADD STUDENT</a></li>
+                                <li><a [routerLink]="['/addattendance']" style="font-size: 13px;">ATTENDANCE</a></li>
+                                <li><a [routerLink]="['/addfee']" style="font-size: 13px;">ADD FEE</a></li>
+                                <li><a [routerLink]="['/addmark']" style="font-size: 13px;">ADD MARKSHEET</a></li>
+                                <li class="hover-me"><a style="font-size: 13px;">REPORT</a><i class="fa fa-angle-right" ></i>
+                                   <div class="sub-menu-2">
+                                       <ul>
+                                        <li><a [routerLink]="['/studentreport']" style="font-size: 13px;">STUDENT REPORT</a></li>
+                                        <li><a [routerLink]="['/attendancereport']" style="font-size: 13px;">ATTENDANCE REPORT</a></li>
+                                        <li><a [routerLink]="['/feereport']" style="font-size: 13px;">FEE REPORT</a></li>
+                                        <li><a [routerLink]="['/markreport']" style="font-size: 13px;">SCORE REPORT</a></li>
+                                       </ul>
+
+                                   </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li> 
+                      
+      <form (ngSubmit)="logoutUser()">         
+
+                      <button style="color: white;" type="submit" class="btn">Log out</button>
+      </form></li>
+                    
+                </ul>
+        
+
+            </div>
+
+        </div>
+        <div class="main-body">
+            <h2 style="text-align: center;">WELCOME TO STUDENT MANGEMENT SYSTEM </h2>
+                <br><br>
+
+                
+        </div>
+    </div>
+  
+</body>
+</html>
+<router-outlet></router-outlet>

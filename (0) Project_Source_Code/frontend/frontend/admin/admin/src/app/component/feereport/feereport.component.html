@@ -1,0 +1,40 @@
+<form (ngSubmit)="loginUser()">         
+    <button type="submit" class="btn btn-primary">Back to Home</button>        
+  </form>
+  
+<h2> Fee List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Admission Number</th>
+            <th> Month </th>
+            <th> amount paid </th>
+            <th> Date of payment </th>
+            
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let fees of fee">
+            <td> {{fees.admissionNo}} </td>
+            <td> {{fees.paidmonth}} </td>
+            <td> {{fees.amount}} </td>
+            <td> {{fees.feeDate}} </td>
+            
+
+            <td>
+                <button 
+                (click) = "updateFee(fees.id)"
+                class="btn btn-info"> Update
+                </button>
+                &nbsp;
+                
+                <button 
+                (click) = "deleteFee(fees.id)"
+                class="btn btn-danger"> Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

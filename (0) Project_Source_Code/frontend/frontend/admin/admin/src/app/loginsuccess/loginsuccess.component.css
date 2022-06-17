@@ -1,0 +1,124 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+.header{
+    background: rgb(24, 86, 221);
+    width: 120%;
+    height: 85px;
+
+}
+/* body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+} */
+.logo
+{
+    width: 45%;
+    padding-top: 32px;
+    float: left;
+}
+.menu-bar{
+    background: rgb(25, 68, 160);
+    text-align: center;
+    margin-right: 0px;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.menu-bar li:hover
+{
+    background-color: #1111c7;
+    border-radius: 3px;
+}
+.menu-bar.fa{
+    margin-right: 8px;
+    
+}
+.sub-menu-1{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background: rgb(29, 77, 199);
+    margin-top: 15px;
+    margin-left: -15px;
+    
+
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+    
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted rgb(13, 12, 12);
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+    
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color: #090a0b;
+}
+.logo-text{
+color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-bottom: 10px;
+    margin-left: 100px;
+    text-align: center;
+}
+.image{
+    padding: 3px;
+    
+}
+
+
+ .main-body
+{
+width: 120%;
+height: 580px; 
+ max-height: 580px; 
+background-image: url("/assets/pexels-ylanite-koppens-796602.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+ }
+.fa-angle-right{
+   float: right;
+}
+.sub-menu-2{
+    display: none;
+
+}
+.hover-me:hover .sub-menu-2{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: rgb(29, 77, 199);
+}

@@ -1,0 +1,40 @@
+<form (ngSubmit)="loginUser()">         
+    <button type="submit" class="btn btn-primary">Back to Home</button>        
+  </form>
+  
+<h2> Student Mark List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Admission Number</th>
+            <th> Chemistry </th>
+            <th> Maths </th>
+            <th> Physics </th>
+            
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let marks of mark">
+            <td> {{marks.admissionNo}} </td>
+            <td> {{marks.physics}} </td>
+            <td> {{marks.maths}} </td>
+            <td> {{marks.chemistry}} </td>
+            
+
+            <td>
+                <button 
+                (click) = "updateMark(marks.id)"
+                class="btn btn-info"> Update
+                </button>
+                &nbsp;
+                
+                <button 
+                (click) = "deleteMark(marks.id)"
+                class="btn btn-danger"> Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

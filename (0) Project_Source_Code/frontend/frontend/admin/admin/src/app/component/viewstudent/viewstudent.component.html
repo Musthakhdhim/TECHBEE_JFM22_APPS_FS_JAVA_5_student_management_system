@@ -1,0 +1,33 @@
+<form (ngSubmit)="getAllStudents()">         
+    <button type="submit" class="btn btn-primary">Back</button>        
+  </form>
+<div class="col-md-6 offset-md-3">
+    <h2> View Student </h2>
+    <div>
+        <div>
+            <label><b> First Name: </b></label> {{student.firstName}}
+        </div>
+        <div>
+            <label><b> Last Name: </b></label> {{student.lastName}}
+        </div>
+        
+        <div>
+            <label><b> Age: </b></label> {{student.age}}
+        </div>
+        <div>
+            <label><b> Father: </b></label> {{student.father}}
+        </div>
+        <div>
+            <label><b> Mother: </b></label> {{student.mother}}
+        </div>
+        <div>
+            <label><b> AdmissionNo: </b></label> {{student.admissionNo}}
+        </div>
+        <div>
+            <label><b> Address: </b></label> {{student.address}}
+        </div>
+        <div>
+            <label><b> Contact Number: </b></label> {{student.contactNo}}
+        </div>
+    </div>
+    </div>
